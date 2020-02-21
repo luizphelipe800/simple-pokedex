@@ -30,7 +30,7 @@ class App extends React.Component {
                     <PokeList list= {pokemons}/>
                 </div>
                 <div className="footer">
-                    <span>&copy; Santos Devs</span>
+                    <span>&copy; Luiz Santos - Dev</span>
                 </div>
             </div>
         );
