@@ -9,7 +9,14 @@ body{
     padding: 0;
 }
 
+.container{
+    display: grid;
+    grid-template-columns: 1fr 30vw;
+    grid-template-rows: 15vh 1fr 10vh;
+}
+
 .container h1{
+    grid-column: 1 / 3;
     text-align: center;
     margin-top: 20px;
     font-family: Arial, Helvetica, sans-serif;
@@ -17,7 +24,11 @@ body{
     color: #4e4e4e;
 }
 
-.poke-grid{
+.container h1 span{
+    color: #ff4f4f;
+}
+
+.container .poke-grid{
     width: 60vw;
     display: grid;
     margin: 0 auto;
@@ -39,8 +50,24 @@ body{
     box-shadow: 0 0 10px #ff4f4f;
     cursor: pointer;
 }
+.poke-info{
+    border: 1px solid #ff4f4f;
+    width: 60%;
+    height: 300px;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.poke-info h1{
+    font-size: 32px;
+    color: #ff4f4f;
+    margin-bottom: 15px;
+}
+
 
 .footer{
+    grid-column: 1 / 3;
     height: 10vh;
     display: grid;
     background-color: #4e4e4e;
