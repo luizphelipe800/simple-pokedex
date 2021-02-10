@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { PokemonProvider } from './contexts/PokemonProvider';
+import './styles/main.css';
 
 //components
-import App from './components/App';
+import App from './App';
 
 ReactDOM.render(
-    <App/>
+    <PokemonProvider>
+        <App/>
+    </PokemonProvider>
     , document.getElementById('root')
 );
