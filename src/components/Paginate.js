@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { PokemonContext } from '../contexts/PokemonProvider';
+import { MdFirstPage, MdLastPage } from 'react-icons/md';
 
 const Paginate = () => {
     const { state, dispatch } = useContext(PokemonContext);
@@ -39,8 +40,8 @@ const Paginate = () => {
 
     return (
         <div className="my-3 flex w-full justify-center items-center flex-wrap">
-            <div onClick={() => handleFirstClick()} className="w-10 flex justify-center items-center mx-0.5 cursor-pointer bg-gray-300 rounded-md text-gray-800 shadow-md">
-                <span>{ '<<' }</span>
+            <div onClick={() => handleFirstClick()} className="w-10 h-8 flex justify-center items-center mx-0.5 cursor-pointer bg-gray-300 rounded-md text-gray-800 shadow-md">
+                <MdFirstPage/>
             </div>
             {
                 paginate.map((num, idx)=> (
@@ -49,6 +50,7 @@ const Paginate = () => {
                         onClick={() => handleOnClick(num)}
                         className={`
                             w-10
+                            h-8
                             flex
                             justify-center
                             items-center
@@ -65,8 +67,8 @@ const Paginate = () => {
                     </div>
                 ))
             }
-            <div onClick={() => handleLastClick()} className="w-10 flex justify-center items-center mx-0.5 cursor-pointer bg-gray-300 rounded-md text-gray-800 shadow-md">
-                <span>{ '>>' }</span>
+            <div onClick={() => handleLastClick()} className="w-10 h-8 flex justify-center items-center mx-0.5 cursor-pointer bg-gray-300 rounded-md text-gray-800 shadow-md">
+                <MdLastPage/>
             </div>
         </div>
     )

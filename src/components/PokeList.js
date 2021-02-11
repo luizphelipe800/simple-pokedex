@@ -12,7 +12,7 @@ const PokeList = () => {
                 <div 
                     key={pokemon.id}
                     pid={pokemon.id}
-                    className="bg-gray-600 flex flex-col justify-center items-center p-3 shadow-md" 
+                    className="bg-gray-600 flex flex-col justify-center items-center p-3 shadow-md cursor-pointer" 
                 >
                     <img 
                         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
