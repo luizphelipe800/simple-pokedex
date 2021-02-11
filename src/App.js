@@ -26,14 +26,14 @@ const App = () => {
     }, [dispatch])
 
     return (
-        <div className="h-screen bg-gray-100 py-3 px-10">
-            <h1 className="text-3xl font-bold ml-10 text-center md:text-left">Poke<span className="text-red-600">dex</span></h1>
+        <div className="h-full bg-gray-900 py-3 px-10">
+            <h1 className="text-3xl font-bold ml-10 text-center md:text-left text-gray-300">Poke<span className="text-red-600">dex</span></h1>
             <Paginate/>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-x-2 gap-y-2 my-3" onClick={handleClick}>
                 <PokeList/>
             </div>
-            <div className="footer">
-                <span>&copy; Luiz Santos - Dev</span>
+            <div className="flex justify-center items-center">
+                <span className="text-gray-200 text-sm">Luiz Santos - Dev</span>
             </div>
         </div>
     )
